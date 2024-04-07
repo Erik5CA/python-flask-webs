@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %} Page Init {% endblock %} {% block
+content %} {% if data.name is none and data.age is none %}
+<h1>Hello World!</h1>
+{% elif data.age is none %}
+<h1>Hello {{ data.name }}!</h1>
+{% elif data.email is none %}
+<h1>Hello {{ data.name }} with age {{ data.age }}!</h1>
+{% else %}
+<h2>My dates</h2>
+<ul>
+  <li>Nombre: {{ data.name }}</li>
+  <li>Age: {{ data.age }}</li>
+  <li>Email: {{ data.email }}</li>
+</ul>
+{% endif %} {% endblock %}

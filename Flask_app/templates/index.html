@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} Page Init {% endblock %} {% block
+content %}
+<h1>Welcome To My SiteWeb</h1>
+{% if name %}
+<h2>Hola {{ name | upper }}</h2>
+{% else %}
+<h2>Hola Mundo</h2>
+{% endif %}
+<h2>List of Friends</h2>
+<ul>
+  {% for friend in friends | reverse %}
+  <li>{{ friend }}</li>
+  {% endfor %}
+</ul>
+
+<p>The date of today is {{ date | today }}</p>
+<p>The repited frase is: {{ repeat('Hello', 3) }}</p>
+{% endblock %}
